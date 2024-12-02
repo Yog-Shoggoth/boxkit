@@ -6,9 +6,9 @@ LABEL com.github.containers.toolbox="true" \
       maintainer="yog_shoggoth"
 
 COPY extra-packages /
-RUN dnf update && \
-    dnf upgrade && \
-    grep -v '^#' /extra-packages | xargs dnf install
+RUN dnf -y upgrade && \
+    dnf -y install $(/extra-packages) && \
+    dnf clean all
 RUN rm /extra-packages
 
 RUN   ln -fs /bin/sh /usr/bin/sh && \
