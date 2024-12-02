@@ -7,6 +7,7 @@ LABEL com.github.containers.toolbox="true" \
 
 COPY extra-packages /
 RUN dnf -y upgrade && \
+    dnf copr enable -y errornointernet/pacakges && \
     dnf -y install $(</extra-packages)
 RUN rm /extra-packages
 
