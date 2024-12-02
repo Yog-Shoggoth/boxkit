@@ -14,9 +14,7 @@ RUN dnf copr enable -y errornointernet/packages && \
     dnf -y install yazi
 
 RUN dnf install -y \
-    "https://github.com/twpayne/chezmoi/releases/download/v2.55.0/chezmoi-2.55.0-x86_64.rpm" \
-    dnf install -y \
-    chezmoi
+    "https://github.com/twpayne/chezmoi/releases/download/v2.55.0/chezmoi-2.55.0-x86_64.rpm" 
 
 RUN   ln -fs /bin/sh /usr/bin/sh && \
       ln -fs /usr/bin/distrobox-host-exec /usr/local/bin/docker && \
