@@ -1,4 +1,4 @@
-FROM https://quay.io/repository/fedora/fedora-toolbox
+FROM quay.io/repository/fedora/fedora-toolbox:latest
 
 LABEL com.github.containers.toolbox="true" \
       usage="This image is meant to be used with the toolbox or distrobox command" \
