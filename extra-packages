@@ -8,7 +8,6 @@ just
 make
 micro
 neovim
-python3
 ripgrep
 wl-clipboard
 zstd
